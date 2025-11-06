@@ -22,15 +22,15 @@ Django · Python · HTML · CSS · SQLite
 Outcome:
 Successfully deployed a functional prototype demonstrating core CRUD operations, clean template structure, and integration between Django models, views, and URLs.
 
-Lemur Finder Project Reflection
+# Lemur Finder Project Reflection
 
 For this project, I created a Django web application called Lemur Finder, which allows users to explore, add, edit, and delete lemur information. The idea behind this project was to build a fully functional CRUD (Create, Read, Update, Delete) web app while practicing Django’s models, views, forms, templates, and routing.
 
-Project Overview
+# Project Overview
 
 The Lemur Finder app starts with a home page that welcomes users and provides a link to view all lemurs. Users can navigate through the site using a consistent navbar across all pages, which includes links to Home, About, Gallery, and Contact sections (though some are placeholders for future content). The interface is styled using Bootstrap and a custom CSS file to give a friendly and visually appealing design.
 
-Key Features
+# Key Features
 
 Lemur Listing:
 The lemur_list page displays all lemurs stored in the database in a table format, including details like name, species, location, and age. Each lemur has a “View Details” link to see more information.
@@ -47,7 +47,7 @@ Users can update lemur details through the edit_lemur page, which pre-fills the 
 Deleting Lemurs:
 The delete_lemur page provides a confirmation step before removing a lemur from the database to prevent accidental deletions.
 
-Technical Highlights
+# Technical Highlights
 
 Models: A single Lemur model defines the lemur data, including a choice field for species.
 
@@ -61,10 +61,10 @@ Routing: Clean URL patterns are set up to map each view to a friendly URL.
 
 Styling: Bootstrap is combined with a custom CSS file to make the site responsive and visually appealing.
 
-Challenges and Learning
+# Challenges and Learning
 
 One of the challenges I faced was managing the CRUD workflow correctly while keeping templates and forms clean and reusable. It was also interesting to integrate Bootstrap with Django templates and maintain consistent styling across multiple pages. I learned a lot about Django’s ModelForm, URL routing, and how to use generic views logic manually to handle forms and database operations.
 
-Conclusion
+# Conclusion
 
 Overall, this project helped me solidify my understanding of Django’s core concepts, including models, views, templates, and forms. It was rewarding to see a fully functional web app come together that allows users to manage lemur information easily. I also gained practical experience in styling a Django app for a user-friendly interface and handling CRUD operations effectively.
