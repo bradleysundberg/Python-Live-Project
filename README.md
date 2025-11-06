@@ -70,6 +70,7 @@ class Lemur(models.Model):
 
     def __str__(self):
         return f"{self.name} ({self.species})"
+```
 
 
 Forms: LemurForm is a ModelForm that handles both creating and editing lemurs, with custom widgets for a better user experience.
