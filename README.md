@@ -144,7 +144,6 @@ urlpatterns = [
 
 Styling: Bootstrap is combined with a custom CSS file to make the site responsive and visually appealing.
 
-```markdown
 ```css
 /* style.css */
 body {
