@@ -51,7 +51,7 @@ The delete_lemur page provides a confirmation step before removing a lemur from 
 
 Models: A single Lemur model defines the lemur data, including a choice field for species.
 
-```# models.py
+```python # models.py
 from django.db import models
 
 class Lemur(models.Model):
