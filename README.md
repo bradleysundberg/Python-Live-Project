@@ -130,7 +130,7 @@ Templates: Reusable templates with a base layout (LemurFinder_base.html) and ind
 
 Routing: Clean URL patterns are set up to map each view to a friendly URL.
 
-```# urls.py
+```python # urls.py
 from django.urls import path
 from . import views
 
