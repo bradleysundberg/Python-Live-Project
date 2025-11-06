@@ -129,6 +129,18 @@ Templates: Reusable templates with a base layout (LemurFinder_base.html) and ind
 
 Routing: Clean URL patterns are set up to map each view to a friendly URL.
 
+```# urls.py
+from django.urls import path
+from . import views
+
+urlpatterns = [
+    path('', views.home, name='lemur_home'),
+    path('create/', views.create_lemur, name='create_lemur'),
+    path('lemurs/', views.lemur_list, name='lemur_list'),
+    path('<int:pk>/', views.lemur_detail, name='lemur_detail'),
+]
+```
+
 Styling: Bootstrap is combined with a custom CSS file to make the site responsive and visually appealing.
 
 # Challenges and Learning
