@@ -92,6 +92,26 @@ class LemurForm(forms.ModelForm):
 
 Views: Function-based views handle rendering templates and processing forms for each CRUD operation.
 
+```# views.py (example: create and detail)
+from django.shortcuts import render, redirect, get_object_or_404
+from .forms import LemurForm
+from .models import Lemur
+
+def create_lemur(request):
+    if request.method == 'POST':
+        form = LemurForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('lemur_home')
+    else:
+        form = LemurForm()
+    return render(request, 'LemurFinder/create_lemur.html', {'form': form})
+
+def lemur_detail(request, pk):
+    lemur = get_object_or_404(Lemur, pk=pk)
+    return render(request, 'LemurFinder/lemur_detail.html', {'lemur': lemur})
+```
+
 Templates: Reusable templates with a base layout (LemurFinder_base.html) and individual templates for home, list, detail, create, edit, and delete pages.
 
 Routing: Clean URL patterns are set up to map each view to a friendly URL.
