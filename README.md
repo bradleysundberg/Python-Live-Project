@@ -115,7 +115,7 @@ def lemur_detail(request, pk):
 Templates: Reusable templates with a base layout (LemurFinder_base.html) and individual templates for home, list, detail, create, edit, and delete pages.
 
 ```markdown
-```html <!-- create_lemur.html -->
+<!-- create_lemur.html -->
 {% extends 'LemurFinder/LemurFinder_base.html' %}
 
 {% block content %}
