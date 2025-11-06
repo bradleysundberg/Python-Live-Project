@@ -75,7 +75,8 @@ class Lemur(models.Model):
 
 Forms: LemurForm is a ModelForm that handles both creating and editing lemurs, with custom widgets for a better user experience.
 
-```# forms.py
+```markdown
+```html # forms.py
 from django import forms
 from .models import Lemur
 
