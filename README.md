@@ -75,6 +75,21 @@ class Lemur(models.Model):
 
 Forms: LemurForm is a ModelForm that handles both creating and editing lemurs, with custom widgets for a better user experience.
 
+```# forms.py
+from django import forms
+from .models import Lemur
+
+class LemurForm(forms.ModelForm):
+    class Meta:
+        model = Lemur
+        fields = ['name', 'species', 'age', 'description', 'image_url']
+        widgets = {
+            'description': forms.Textarea(attrs={'rows': 3, 'placeholder': 'Enter details about this lemur...'}),
+            'name': forms.TextInput(attrs={'placeholder': 'Lemur name'}),
+            'image_url': forms.URLInput(attrs={'placeholder': 'https://...'}),
+        }
+```
+
 Views: Function-based views handle rendering templates and processing forms for each CRUD operation.
 
 Templates: Reusable templates with a base layout (LemurFinder_base.html) and individual templates for home, list, detail, create, edit, and delete pages.
