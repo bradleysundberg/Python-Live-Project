@@ -51,6 +51,27 @@ The delete_lemur page provides a confirmation step before removing a lemur from 
 
 Models: A single Lemur model defines the lemur data, including a choice field for species.
 
+```# models.py
+from django.db import models
+
+class Lemur(models.Model):
+    SPECIES_CHOICES = [
+        ('Ruffed', 'Ruffed Lemur'),
+        ('Ring-tailed', 'Ring-tailed Lemur'),
+        ('Sifaka', 'Sifaka'),
+        ('Mouse', 'Mouse Lemur'),
+    ]
+
+    name = models.CharField(max_length=100)
+    species = models.CharField(max_length=20, choices=SPECIES_CHOICES)
+    age = models.PositiveIntegerField()
+    description = models.TextField(blank=True)
+    image_url = models.URLField(blank=True, null=True)
+
+    def __str__(self):
+        return f"{self.name} ({self.species})"
+
+
 Forms: LemurForm is a ModelForm that handles both creating and editing lemurs, with custom widgets for a better user experience.
 
 Views: Function-based views handle rendering templates and processing forms for each CRUD operation.
