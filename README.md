@@ -114,6 +114,19 @@ def lemur_detail(request, pk):
 
 Templates: Reusable templates with a base layout (LemurFinder_base.html) and individual templates for home, list, detail, create, edit, and delete pages.
 
+```<!-- create_lemur.html -->
+{% extends 'LemurFinder/LemurFinder_base.html' %}
+
+{% block content %}
+<h2>Add a New Lemur</h2>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Save Lemur</button>
+</form>
+{% endblock %}
+```
+
 Routing: Clean URL patterns are set up to map each view to a friendly URL.
 
 Styling: Bootstrap is combined with a custom CSS file to make the site responsive and visually appealing.
