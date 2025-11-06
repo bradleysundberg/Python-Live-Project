@@ -143,6 +143,24 @@ urlpatterns = [
 
 Styling: Bootstrap is combined with a custom CSS file to make the site responsive and visually appealing.
 
+```/* style.css */
+body {
+    background-color: #f0f8ff;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+}
+
+button {
+    padding: 8px 14px;
+    border-radius: 6px;
+    border: none;
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+}
+```
+
 # Challenges and Learning
 
 One of the challenges I faced was managing the CRUD workflow correctly while keeping templates and forms clean and reusable. It was also interesting to integrate Bootstrap with Django templates and maintain consistent styling across multiple pages. I learned a lot about Django’s ModelForm, URL routing, and how to use generic views logic manually to handle forms and database operations.
