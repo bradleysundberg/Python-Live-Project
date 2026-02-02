@@ -1,5 +1,5 @@
 # Python-Live-Project
-My Python live project for The Tech Academy's Software Developer Bootcamp
+My Python live project for The Tech Academy's Software Developer Bootcamp.
 
 Overview:
 Developed a full-stack Django application with basic Create, Read, and Detail functionality. The app enables users to add, view, and explore items stored in a database through a clean and responsive web interface.
